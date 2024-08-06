@@ -144,16 +144,15 @@
             const locationInfoElem = document.getElementById("locationInfo");
             const messageContent = locationInfoElem.textContent;
 
-           woff.sendMessage({
+            woff.sendMessage({
                 content: messageContent
             })
-            .then(() => {
-                alert('Sent successfully');
-            })
-            .catch((err) => {
-                alert('error: ' + err);
-            });
-            
+                .then(() => {
+                    alert('Sent successfully');
+                })
+                .catch((err) => {
+                    alert('error: ' + err);
+                });
         }
 
         function scanQRCode() {
@@ -172,15 +171,14 @@
             const messageContent = qrResultElem.textContent;
 
             woff.sendMessage({
-               content: "Hello、World！"
+                content: messageContent
             })
-             .then(()=> {
-               console.log('message sent');
-             })
-             .catch((err)=> {
-               console.log('error', err);
-             });
-            
+                .then(() => {
+                    alert('QRコードの情報を送信しました');
+                })
+                .catch((err) => {
+                    alert('error: ' + err);
+                });
         }
 
         document.getElementById("exitAppBtn").addEventListener("click", function () {
@@ -189,12 +187,12 @@
 
         window.onload = function () {
             if (!woff.isLoggedIn()) {
-                    woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
-                }
+                woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
+            }
             woff
                 .init({
                     woffId: woffId
-                })  
+                })
                 .then(() => {
                     woff.getProfile().then(profile => {
                         const profileInfoElem = document.getElementById("userProfileInfo");
