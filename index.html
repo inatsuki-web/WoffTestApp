@@ -154,7 +154,7 @@
                     alert('error: ' + err);
                 });
         }
-                
+
         function scanQRCode() {
             woff.scanQR()
                 .then((result) => {
@@ -190,12 +190,12 @@
                 .init({
                     woffId: woffId
                 })
-                .then(() => {
 
-                    if (!woff.isLoggedIn()) {
-                        woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
-                    }
+                if (!woff.isLoggedIn()) {
+                    woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
+                }
                     
+                .then(() => {
                     woff.getProfile().then(profile => {
                         const profileInfoElem = document.getElementById("userProfileInfo");
                         profileInfoElem.innerHTML = `
