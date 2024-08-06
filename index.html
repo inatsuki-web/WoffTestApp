@@ -141,12 +141,12 @@
         }
 
         function sendLocationToWOFF() {
-            const locationInfoElem = document.getElementById("locationInfo");
-            const messageContent = locationInfoElem.textContent;
+            //const locationInfoElem = document.getElementById("locationInfo");
+            //const messageContent = locationInfoElem.textContent;
 
             woff.sendMessage({
-                console.log(messageContent);
-                content: messageContent
+                
+                content: 'text'
             })
                 .then(() => {
                     alert('Sent successfully');
