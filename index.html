@@ -7,7 +7,7 @@
     <title>WOFF アプリ サンプル</title>
     <script>
         // WOFF アプリ ID を設定する
-        const woffId = "HSYOpYGftMMNdIg0q6kxjQ";
+        const woffId = "6WiqzH3CzFx-LTigKHUxSQ";
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
@@ -143,16 +143,16 @@
         function sendLocationToWOFF() {
             const locationInfoElem = document.getElementById("locationInfo");
             const messageContent = locationInfoElem.textContent;
-             woff.sendMessage({
+
+            woff.sendMessage({
                 content: messageContent
             })
-            .then(() => {
-                alert('Sent successfully');
-            })
-            .catch((err) => {
-                alert('error: ' + err);
-            });
-
+                .then(() => {
+                    alert('Sent successfully');
+                })
+                .catch((err) => {
+                    alert('error: ' + err);
+                });
         }
 
         function scanQRCode() {
@@ -185,16 +185,12 @@
             woff.closeWindow();
         });
 
-        window.onload = function () {            
+        window.onload = function () {
             woff
                 .init({
                     woffId: woffId
                 })
-                if (!woff.isLoggedIn()) {
-                        woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
-                    }
                 .then(() => {
-                    
                     woff.getProfile().then(profile => {
                         const profileInfoElem = document.getElementById("userProfileInfo");
                         profileInfoElem.innerHTML = `
