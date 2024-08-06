@@ -171,15 +171,7 @@
             const qrResultElem = document.getElementById("qrResult");
             const messageContent = qrResultElem.textContent;
 
-            woff.sendMessage({
-                content: messageContent
-            })
-                .then(() => {
-                    alert('QRコードの情報を送信しました');
-                })
-                .catch((err) => {
-                    alert('error: ' + err);
-                });
+            
         }
 
         document.getElementById("exitAppBtn").addEventListener("click", function () {
