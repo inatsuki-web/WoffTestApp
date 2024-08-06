@@ -145,6 +145,7 @@
             const messageContent = locationInfoElem.textContent;
 
             woff.sendMessage({
+                console.log(messageContent);
                 content: messageContent
             })
                 .then(() => {
