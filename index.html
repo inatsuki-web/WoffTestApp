@@ -187,13 +187,13 @@
 
         window.onload = function () {            
             woff
-                if (!woff.isLoggedIn()) {
-                    woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
-                }
                 .init({
                     woffId: woffId
                 })
                 .then(() => {
+                    if (!woff.isLoggedIn()) {
+                        woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
+                    }
                     woff.getProfile().then(profile => {
                         const profileInfoElem = document.getElementById("userProfileInfo");
                         profileInfoElem.innerHTML = `
