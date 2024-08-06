@@ -144,15 +144,15 @@
             const locationInfoElem = document.getElementById("locationInfo");
             const messageContent = locationInfoElem.textContent;
 
-            woff.sendMessage({
-               content: "Hello、World！"
+           woff.sendMessage({
+                content: messageContent
             })
-             .then(()=> {
-               console.log('message sent');
-             })
-             .catch((err)=> {
-               console.log('error', err);
-             });
+            .then(() => {
+                alert('Sent successfully');
+            })
+            .catch((err) => {
+                alert('error: ' + err);
+            });
             
         }
 
