@@ -143,18 +143,16 @@
         function sendLocationToWOFF() {
             const locationInfoElem = document.getElementById("locationInfo");
             const messageContent = locationInfoElem.textContent;
+             woff.sendMessage({
+                content: messageContent
+            })
+            .then(() => {
+                alert('Sent successfully');
+            })
+            .catch((err) => {
+                alert('error: ' + err);
+            });
 
-            woff.sendMessage({
-   content: "Hello、World！"
-})
- .then(()=> {
-   console.log('message sent');
- })
- .catch((err)=> {
-   console.log('error', err);
- });
-
-           
         }
 
         function scanQRCode() {
