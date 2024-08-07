@@ -94,21 +94,13 @@
     <div class="container">
         <!-- 位置情報のセクション -->
         <div class="section">
-            <h2>位置情報の取得</h2>
-            <p>Geolocation API で位置情報を取得します。</p>
-            <button class="btn" id="getLocationBtn">位置情報を取得</button>
-            <div id="locationInfo"></div>
-            <button class="btn" id="sendLocationBtn">取得した位置情報を送信</button>
-        </div>
+            <h2>申請情報</h2>
+            <p>申請者：</p>
+            <p>申請内容：</p>
+            <p>金額：</p>
 
-        <!-- QRコードリーダーのセクション -->
-        <!--<div class="section">
-            <h2>QRコードをスキャンする</h2>
-            <p>woff.scanQR() メソッドで QR コードリーダーを起動して QR コードの読み込みを行います。</p>
-            <button class="btn" id="scanQRBtn">QR コードリーダーを起動</button>
-            <div id="qrResult"></div>
-            <button class="btn" id="sendQRDataBtn">取得したQRコード情報を送信</button>
-        </div> -->
+            <button class="btn" id="sendLocationBtn">承認する</button>
+        </div>
         
         <!-- ユーザープロフィール情報のセクション -->
         <div class="section" id="userProfileSection">
@@ -119,8 +111,6 @@
         
         <!-- アプリ終了のセクション -->
         <div class="section">
-            <h2>アプリを終了する</h2>
-            <p>woff.closeWindow() メソッドで WOFF アプリを終了します。</p>
             <button class="btn" id="exitAppBtn">アプリを終了</button>
         </div>
     </div>
