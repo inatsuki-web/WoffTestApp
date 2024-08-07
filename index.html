@@ -7,7 +7,7 @@
     <title>WOFF アプリ サンプル</title>
     <script>
         // WOFF アプリ ID を設定する
-        const woffId = "HSYOpYGftMMNdIg0q6kxjQ";
+        const woffId = "6WiqzH3CzFx-LTigKHUxSQ";
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
@@ -185,7 +185,7 @@
             woff.closeWindow();
         });
 
-        window.onload = function () {            
+        window.onload = function () {
             woff
                 .init({
                     woffId: woffId
@@ -193,11 +193,11 @@
                 .then(() => {
                     woff.getProfile().then(profile => {
                         const profileInfoElem = document.getElementById("userProfileInfo");
-                        profileInfoElem.innerHTML = '
+                        profileInfoElem.innerHTML = `
                     ドメイン ID: ${profile.domainId} <br>
                     ユーザー ID: ${profile.userId} <br>
                     ユーザー名: ${profile.displayName}
-               ';
+                `;
                     }).catch(error => {
                         console.error('Profile error:', error);
                     });
