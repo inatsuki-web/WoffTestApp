@@ -118,13 +118,13 @@
     </div>
 
     <script>
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                document.getElementById("locationInfo").innerHTML = "このブラウザはGeolocationをサポートしていません。";
-            }
-        }
+        // function getLocation() {
+        //     if (navigator.geolocation) {
+        //         navigator.geolocation.getCurrentPosition(showPosition);
+        //     } else {
+        //         document.getElementById("locationInfo").innerHTML = "このブラウザはGeolocationをサポートしていません。";
+        //     }
+        // }
 
         function showPosition(position) {
             document.getElementById("locationInfo").innerHTML = "Latitude: " + position.coords.latitude +
@@ -204,7 +204,7 @@
                     console.log(err.code, err.message);
                 });
 
-            document.getElementById("getLocationBtn").addEventListener("click", getLocation);
+            // document.getElementById("getLocationBtn").addEventListener("click", getLocation);
             document.getElementById("sendLocationBtn").addEventListener("click", sendLocationToWOFF);
             document.getElementById("scanQRBtn").addEventListener("click", scanQRCode);
             document.getElementById("sendQRDataBtn").addEventListener("click", sendQRToWOFF);
