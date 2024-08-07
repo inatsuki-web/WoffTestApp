@@ -133,11 +133,8 @@
         }
 
         function sendLocationToWOFF() {
-            const locationInfoElem = document.getElementById("locationInfo");
-            const messageContent = locationInfoElem.textContent;
-
-            messageContent='承認しました'
-
+            //const locationInfoElem = document.getElementById("locationInfo");
+            const messageContent = '承認しました';
             woff.sendMessage({
                 content: messageContent
             })
@@ -149,31 +146,31 @@
                 });
         }
 
-        function scanQRCode() {
-            woff.scanQR()
-                .then((result) => {
-                    document.getElementById("qrResult").innerHTML = "Scanned Info: " + result.value;
-                    document.getElementById("sendQRDataBtn").style.display = "block";
-                })
-                .catch((err) => {
-                    alert('error: ' + err);
-                });
-        }
+        // function scanQRCode() {
+        //     woff.scanQR()
+        //         .then((result) => {
+        //             document.getElementById("qrResult").innerHTML = "Scanned Info: " + result.value;
+        //             document.getElementById("sendQRDataBtn").style.display = "block";
+        //         })
+        //         .catch((err) => {
+        //             alert('error: ' + err);
+        //         });
+        // }
 
-        function sendQRToWOFF() {
-            const qrResultElem = document.getElementById("qrResult");
-            const messageContent = qrResultElem.textContent;
+        // function sendQRToWOFF() {
+        //     const qrResultElem = document.getElementById("qrResult");
+        //     const messageContent = qrResultElem.textContent;
 
-            woff.sendMessage({
-                content: messageContent
-            })
-                .then(() => {
-                    alert('QRコードの情報を送信しました');
-                })
-                .catch((err) => {
-                    alert('error: ' + err);
-                });
-        }
+        //     woff.sendMessage({
+        //         content: messageContent
+        //     })
+        //         .then(() => {
+        //             alert('QRコードの情報を送信しました');
+        //         })
+        //         .catch((err) => {
+        //             alert('error: ' + err);
+        //         });
+        // }
 
         document.getElementById("exitAppBtn").addEventListener("click", function () {
             woff.closeWindow();
@@ -206,8 +203,8 @@
 
             // document.getElementById("getLocationBtn").addEventListener("click", getLocation);
             document.getElementById("sendLocationBtn").addEventListener("click", sendLocationToWOFF);
-            document.getElementById("scanQRBtn").addEventListener("click", scanQRCode);
-            document.getElementById("sendQRDataBtn").addEventListener("click", sendQRToWOFF);
+            //document.getElementById("scanQRBtn").addEventListener("click", scanQRCode);
+            //document.getElementById("sendQRDataBtn").addEventListener("click", sendQRToWOFF);
         };
     </script>
     <script charset="utf-8" src="https://static.worksmobile.net/static/wm/woff/edge/3.6/sdk.js"></script>
