@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>経費BANK WOFFアプリ</title>
+    <title>WOFF TEST</title>
     <script>
         // WOFF アプリ ID を設定する
         const woffId = "UOXPmL3s5MSSUdQsrs7WWg";
@@ -89,18 +89,18 @@
 <body>
 
     <header>
-        <h1>経費BANK WOFFアプリ</h1>
+        <h1>WOFF TEST</h1>
     </header>
 
     <div class="container">
         <!-- 申請情報のセクション -->
         <div class="section">
             <h2>交通費申請</h2>
-            <p>申請者：100001  徳川 家康</p>
-            <p>伝票No： A10000227 </p>
+            <p>申請者：〇〇　〇〇</p>
+            <p>伝票No： A1234567 </p>
             <p>金額：100,000</p>
-            <p>支払先：100001  徳川 家康</p>
-            <p>申請内容：沖縄出張のため</p>
+            <p>支払先：〇〇　〇〇</p>
+            <p>申請内容：〇〇出張のため</p>
             <button class="btn" id="sendLocationBtn">承認する</button>
         </div>
         
@@ -135,6 +135,8 @@
         function sendLocationToWOFF() {
             const locationInfoElem = document.getElementById("locationInfo");
             const messageContent = locationInfoElem.textContent;
+
+            messageContent='承認しました'
 
             woff.sendMessage({
                 content: messageContent
