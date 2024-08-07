@@ -186,6 +186,9 @@
         });
 
         window.onload = function () {
+            if (!woff.isLoggedIn()) {
+    woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
+}
             woff
                 .init({
                     woffId: woffId
