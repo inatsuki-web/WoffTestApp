@@ -199,10 +199,7 @@
                     ユーザー名: ${profile.displayName}
                 `;
                 })
-                .catch((err) => {
-                    if (!woff.isLoggedIn()) {
-                        woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
-                    }
+                .catch((err) => {                   
                     console.log(err.code, err.message);
                 });
 
