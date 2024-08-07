@@ -185,11 +185,11 @@
             woff.closeWindow();
         });
 
-        window.onload = function () {
-            if (!woff.isLoggedIn()) {
-    woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
-}
+        window.onload = function () {            
             woff
+                if (!woff.isLoggedIn()) {
+                woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
+                }
                 .init({
                     woffId: woffId
                 })
