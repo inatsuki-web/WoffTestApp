@@ -192,8 +192,8 @@
                 })
                 .then(() => {
                     if (!woff.isLoggedIn()) {
-                        woff.login();
-                    }        
+                        woff.login({ redirectUri: "https://inatsuki-web.github.io/WOFFSample/" });
+                    }
                     woff.getProfile().then(profile => {
                         const profileInfoElem = document.getElementById("userProfileInfo");
                         profileInfoElem.innerHTML = "ドメイン ID: ${profile.domainId} <br>ユーザー ID: ${profile.userId} <br>ユーザー名: ${profile.displayName}";
